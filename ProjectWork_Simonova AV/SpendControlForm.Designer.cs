@@ -36,13 +36,12 @@
             this.AddSpend = new System.Windows.Forms.Button();
             this.SpendStatistic = new System.Windows.Forms.Button();
             this.Wallets = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.CurrentDate = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.todayLimit = new System.Windows.Forms.Label();
+            this.todaySpendSum = new System.Windows.Forms.Label();
+            this.todaybalance = new System.Windows.Forms.Label();
+            this.richStatus = new System.Windows.Forms.Label();
+            this.CurrentDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,18 +118,9 @@
             this.Wallets.Name = "Wallets";
             this.Wallets.Size = new System.Drawing.Size(186, 58);
             this.Wallets.TabIndex = 9;
-            this.Wallets.Text = "Кошелёк";
+            this.Wallets.Text = "Кошельки";
             this.Wallets.UseVisualStyleBackColor = false;
             this.Wallets.Click += new System.EventHandler(this.Wallets_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(229, 460);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Здесь выводить статус (транжира, молодец)";
             // 
             // timer1
             // 
@@ -138,63 +128,61 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // todayLimit
+            // 
+            this.todayLimit.AutoSize = true;
+            this.todayLimit.Location = new System.Drawing.Point(172, 206);
+            this.todayLimit.Name = "todayLimit";
+            this.todayLimit.Size = new System.Drawing.Size(13, 13);
+            this.todayLimit.TabIndex = 16;
+            this.todayLimit.Text = "0";
+            // 
+            // todaySpendSum
+            // 
+            this.todaySpendSum.AutoSize = true;
+            this.todaySpendSum.Location = new System.Drawing.Point(214, 309);
+            this.todaySpendSum.Name = "todaySpendSum";
+            this.todaySpendSum.Size = new System.Drawing.Size(13, 13);
+            this.todaySpendSum.TabIndex = 17;
+            this.todaySpendSum.Text = "0";
+            // 
+            // todaybalance
+            // 
+            this.todaybalance.AutoSize = true;
+            this.todaybalance.Location = new System.Drawing.Point(197, 374);
+            this.todaybalance.Name = "todaybalance";
+            this.todaybalance.Size = new System.Drawing.Size(13, 13);
+            this.todaybalance.TabIndex = 18;
+            this.todaybalance.Text = "0";
+            // 
+            // richStatus
+            // 
+            this.richStatus.AutoSize = true;
+            this.richStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.richStatus.Location = new System.Drawing.Point(37, 459);
+            this.richStatus.Name = "richStatus";
+            this.richStatus.Size = new System.Drawing.Size(0, 31);
+            this.richStatus.TabIndex = 19;
+            // 
             // CurrentDate
             // 
-            this.CurrentDate.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.CurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentDate.Location = new System.Drawing.Point(137, 38);
+            this.CurrentDate.AutoSize = true;
+            this.CurrentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F);
+            this.CurrentDate.Location = new System.Drawing.Point(154, 56);
             this.CurrentDate.Name = "CurrentDate";
-            this.CurrentDate.Size = new System.Drawing.Size(165, 58);
-            this.CurrentDate.TabIndex = 11;
-            this.CurrentDate.Text = "";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(193, 194);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(273, 74);
-            this.richTextBox1.TabIndex = 12;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(33, 445);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(190, 47);
-            this.richTextBox2.TabIndex = 13;
-            this.richTextBox2.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox3.Location = new System.Drawing.Point(206, 299);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(142, 42);
-            this.richTextBox3.TabIndex = 14;
-            this.richTextBox3.Text = "";
-            // 
-            // richTextBox4
-            // 
-            this.richTextBox4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Location = new System.Drawing.Point(193, 363);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(142, 42);
-            this.richTextBox4.TabIndex = 15;
-            this.richTextBox4.Text = "";
+            this.CurrentDate.Size = new System.Drawing.Size(0, 31);
+            this.CurrentDate.TabIndex = 20;
             // 
             // SpendControlForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 611);
-            this.Controls.Add(this.richTextBox4);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.CurrentDate);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.richStatus);
+            this.Controls.Add(this.todaybalance);
+            this.Controls.Add(this.todaySpendSum);
+            this.Controls.Add(this.todayLimit);
             this.Controls.Add(this.Wallets);
             this.Controls.Add(this.SpendStatistic);
             this.Controls.Add(this.AddSpend);
@@ -219,12 +207,11 @@
         private System.Windows.Forms.Button AddSpend;
         private System.Windows.Forms.Button SpendStatistic;
         private System.Windows.Forms.Button Wallets;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.RichTextBox CurrentDate;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.Label todayLimit;
+        private System.Windows.Forms.Label todaySpendSum;
+        private System.Windows.Forms.Label todaybalance;
+        private System.Windows.Forms.Label richStatus;
+        private System.Windows.Forms.Label CurrentDate;
     }
 }

@@ -13,8 +13,12 @@ namespace ProjectWork_Simonova_AV.Forms
 {
     public partial class AddWallet : Form
     {
-        public AddWallet()
+        private Wallets parentForm;
+
+        public AddWallet(Wallets parentForm)
         {
+            this.parentForm = parentForm;
+
             InitializeComponent();
         }
 
@@ -41,13 +45,21 @@ namespace ProjectWork_Simonova_AV.Forms
                 MessageBox.Show("Кошелек добавлен");
             else
                 MessageBox.Show("Кошелек не добавлен");
+
+            this.Dispose();
+            parentForm.Show();
+            parentForm.UpdateForm();
         }
 
         private void CancelSpendAdd_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            SpendControlForm spendcontrolform = new SpendControlForm();
-            spendcontrolform.Show();
+            this.Dispose();
+            parentForm.Show();
+        }
+
+        private void AddWallet_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

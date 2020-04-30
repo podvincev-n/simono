@@ -42,9 +42,9 @@ namespace ProjectWork_Simonova_AV.Forms
             database.openConnection();
 
             if (command.ExecuteNonQuery() == 1) // если команда на заполнение данных выполнена успешно
-                MessageBox.Show("Кошелек добавлен");
+                MessageBox.Show("Деньги в кошельке");
             else
-                MessageBox.Show("Кошелек не добавлен");
+                MessageBox.Show("Что-то пошло не так. Не удалость добавить деньги");
 
             MySqlCommand updcommand = new MySqlCommand("UPDATE `wallets` set `sum` = `sum` + @sum WHERE id_wallet = @idwallet", database.getConnection());
 

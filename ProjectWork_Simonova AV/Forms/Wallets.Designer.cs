@@ -34,6 +34,8 @@
             this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.balance = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // Return
@@ -45,6 +47,7 @@
             this.Return.TabIndex = 14;
             this.Return.Text = "Назад";
             this.Return.UseVisualStyleBackColor = true;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // AddWallet
             // 
@@ -63,7 +66,9 @@
             this.walletList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.name,
             this.balance,
-            this.button});
+            this.button,
+            this.button2,
+            this.button3});
             this.walletList.HideSelection = false;
             this.walletList.Location = new System.Drawing.Point(12, 12);
             this.walletList.Name = "walletList";
@@ -84,6 +89,14 @@
             // 
             this.button.Text = "Добавить денег";
             // 
+            // button2
+            // 
+            this.button2.Text = "Редактировать";
+            // 
+            // button3
+            // 
+            this.button3.Text = "Удалить";
+            // 
             // Wallets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -93,7 +106,7 @@
             this.Controls.Add(this.Return);
             this.Controls.Add(this.AddWallet);
             this.Name = "Wallets";
-            this.Text = "Form1";
+            this.Text = "Кошельки";
             this.Load += new System.EventHandler(this.Wallets_Load);
             this.ResumeLayout(false);
 
@@ -106,5 +119,7 @@
         private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.ColumnHeader balance;
         private System.Windows.Forms.ColumnHeader button;
+        private System.Windows.Forms.ColumnHeader button2;
+        private System.Windows.Forms.ColumnHeader button3;
     }
 }

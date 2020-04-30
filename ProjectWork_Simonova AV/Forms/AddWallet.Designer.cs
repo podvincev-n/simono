@@ -136,6 +136,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddWallet";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AddWallet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.walletSum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

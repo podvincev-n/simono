@@ -74,7 +74,7 @@
             this.Controls.Add(this.addInc);
             this.Controls.Add(this.incomeSum);
             this.Name = "AddIncome";
-            this.Text = "AddMoney";
+            this.Text = "Добавить денег в кошелек";
             this.Load += new System.EventHandler(this.AddIncome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.incomeSum)).EndInit();
             this.ResumeLayout(false);

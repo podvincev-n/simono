@@ -6,22 +6,35 @@ using System.Threading.Tasks;
 
 namespace ProjectWork_Simonova_AV.Classes
 {
-    class Wallet
+    class Spend
     {
-        private string name;
-        public string Name
+        private int id_spend;
+        public int IdSpend
         {
             get
             {
-                return name;
+                return id_spend;
             }
 
             set
             {
-                name = value;
+                id_spend = value;
             }
         }
 
+        private int id_category;
+        public int IdCategory
+        {
+            get
+            {
+                return id_category;
+            }
+
+            set
+            {
+                id_category = value;
+            }
+        }
         private int sum;
         public int Sum
         {
@@ -63,9 +76,6 @@ namespace ProjectWork_Simonova_AV.Classes
                 id_user = value;
             }
         }
-
-
-        
 
 
     }
